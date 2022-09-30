@@ -8,12 +8,12 @@ int main(int argc, char *argv[])
 	size_t message_length;
 	bool status;
 
-	protoblog_TodoList todo_list = protoblog_TodoList_init_zero;
+	todolist_TodoList todo_list = todolist_TodoList_init_zero;
 	pb_ostream_t stream = pb_ostream_from_buffer(buffer, sizeof(buffer));
 
 	todo_list.owner_id = 1;
 
-	status = pb_encode(&stream, &protoblog_TodoList_msg, &todo_list);
+	status = pb_encode(&stream, &todolist_TodoList_msg, &todo_list);
 	message_length = stream.bytes_written;
 
 	printf("written %zu bytes\n", message_length);

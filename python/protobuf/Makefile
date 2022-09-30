@@ -12,7 +12,7 @@ serialize: serialize.c todolist.pb.c nanopb-0.4.6/pb_encode.c nanopb-0.4.6/pb_co
 	cc -I nanopb-0.4.6 -o $@ $?
 	chmod +x ./serialize
 
-todolist.pbbin: serialize
+todolist.pbbin: serialize todolist.proto
 	./$< $@
 
 deserialize: todolist.pbbin

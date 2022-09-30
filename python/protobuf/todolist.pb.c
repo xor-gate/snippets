@@ -6,10 +6,10 @@
 #error Regenerate this file with the current version of nanopb generator.
 #endif
 
-PB_BIND(protoblog_TodoList, protoblog_TodoList, AUTO)
+PB_BIND(todolist_TodoList, todolist_TodoList, AUTO)
 
 
-PB_BIND(protoblog_TodoList_ListItems, protoblog_TodoList_ListItems, AUTO)
+PB_BIND(todolist_TodoList_ListItems, todolist_TodoList_ListItems, AUTO)
 
 
 
