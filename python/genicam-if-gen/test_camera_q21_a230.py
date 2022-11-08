@@ -3,7 +3,18 @@ from test_camera import TestCamera
 
 class LUT:
 	def __init__(self, cxp: CXPInterface):
-		self.cxp = cxp
+		self._cxp = cxp
+	def rw_feature(self, value = None) -> any:
+		featureName = "rw_feature"
+		if value:
+			self.cxp.set(featureName, value)
+		else:
+			return self.cxp.get(featureName, value)
+
+	def ro_feature(self) -> any:
+		return self.cxp.get("LUTRoFeature)
+
+	# todo return enum class
 	def lut_status(self) -> str:
 		return "LUTStatus"
 
